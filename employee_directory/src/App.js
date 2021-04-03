@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import EmployeeTable from './components/EmployeeTable';
 import SearchBar from './components/SearchBar';
-import Header from './components/Jumbotron';
+import Header from './components/Jumbo';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
