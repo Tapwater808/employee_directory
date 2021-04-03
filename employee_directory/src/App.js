@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import EmployeeTable from './components/EmployeeTable';
+import SearchBar from './components/SearchBar';
+import Header from './components/Jumbotron';
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header />
+    <br></br>
+    <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+    <br></br>
+    <EmployeeTable searchTerm={searchTerm} />
+    </>
   );
 }
 
